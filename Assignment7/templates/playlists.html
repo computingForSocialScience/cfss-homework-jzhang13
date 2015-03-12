@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playlists</title>
+</head>
+<body>
+    {% for p in playlists %}
+        <div>
+            <a href="/playlist/{{ p[0] }}">{{ p[0] }}. {{ p[1] }}</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
