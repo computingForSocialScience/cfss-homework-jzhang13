@@ -7,7 +7,7 @@ from analyzeNetworks import *
 dbname="playlists"
 host="localhost"
 user="root"
-passwd="Scarlet423"
+passwd=""
 db=pymysql.connect(db=dbname, host=host, user=user,passwd=passwd, charset='utf8')
 
 app = Flask(__name__)
