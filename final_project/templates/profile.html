@@ -1,0 +1,18 @@
+<html>
+<body>
+  <h1>{{ name }}</h1>
+  <img src="{{ pic }}">
+  <p>Birthday: {{ birthday }}</p>
+  <p>Sex: {{ sex }}</p>
+  <p><a href="{{ profile }}">Profile</a></p>
+  <h2>Friends</h2>
+  <ul>
+    {% for f in friends_with_id %}
+    <li>
+      <a href="/profile/{{ f[0] }}">{{ f[1] }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <img src="/static/temp/{{ graph_url }}">
+</body>
+</html>
