@@ -1,0 +1,14 @@
+import pymysql
+import json
+
+db = pymysql.connect(db='fb_networks',host='localhost',user='root',passwd='', charset = 'utf-8')
+
+def initialize():
+    cur = db.cursor()
+    table = '''CREATE TABLE IF NOT EXISTS friend_attributes (uid VARCHAR(255), first_name VARCHAR(255),middle_name VARCHAR(255),last_name VARCHAR(255),name VARCHAR(255),pic VARCHAR(255),religion VARCHAR(255),birthday_date VARCHAR(255),sex VARCHAR(255), hometown_location VARCHAR(255),current_location VARCHAR(255),relationship_status VARCHAR(255),significant_other_id VARCHAR(255),political VARCHAR(255),locale VARCHAR(255), profile_url VARCHAR(255),website VARCHAR(255));'''
+    cur.execute(table)
+    edges = '''CREATE TABLE IF NOT EXISTS friend_edges (uid1 VARCHAR(255),uid2 VARCHAR(255));'''
+    cur.execute(edges)
+    db.commit()
+
+def 
